@@ -1,0 +1,37 @@
+<?php
+
+return [
+    'title' => '配置增强',
+    'config' => '配置',
+    'tabs' => '归类',
+    'name' => '名称',
+    'slug' => '标识',
+    'element' => [
+        'normal' => '默认',
+        'number' => '数字',
+        'textarea' => '文本域',
+        'date' => '日期',
+        'time' => '时间',
+        'datetime' => '日期时间',
+        'password' => '密码',
+        'switch' => '开关',
+        'radio' => '单选框组',
+        'checkbox' => '多选框组',
+        'select' => '下拉框',
+        'multipleSelect' => '下拉多选',
+        'listbox' => '左右多选框',
+        'image' => '图片',
+        'multipleImage' => '多图',
+        'file' => '文件',
+        'multipleFile' => '多文件',
+        'editor' => '编辑器',
+        'rate' => '费率',
+        'tags' => '标签',
+        'icon' => '图标',
+        'color' => '颜色',
+        'map' => '地图',
+        'table' => '表格',
+    ],
+    'yes' => '是',
+    'no' => '否'
+];
