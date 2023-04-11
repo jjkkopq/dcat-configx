@@ -55,8 +55,8 @@ class AdminController extends Controller
                 // $tab->add('前站配置', new SiteForm());
                 $tabs = (new ConfigxTabsModel)->allNodes();
                 foreach ($tabs as $key => $v) {
-                    $tab->add($v['name'], (new FieldForm([], null, $v['slug'])), $key == 0 ? true : false);
-                    // $tab->add($v['name'], (new FieldForm([], null, $v['slug'])));
+                    // $tab->add($v['name'], (new FieldForm([], null, $v['slug'])), $key == 0 ? true : false);
+                    $tab->add($v['name'], (new FieldForm([], null, $v['slug'])));
                 }
                 // $tab->dropdown([
                 //     [
