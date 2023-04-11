@@ -1,0 +1,31 @@
+{
+  "name": "jjkkopq/dcat-configx",
+  "description": "Dcat Admin 站点设置",
+  "type": "library",
+  "keywords": ["dcat-admin", "extension"],
+  "homepage": "https://github.com/jjkkopq/dcat-configx",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "jjkkopq",
+      "email": "384604417@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "dcat/laravel-admin": "~2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jjkkopq\\DcatConfigx\\": "src/"
+    }
+  },
+  "extra": {
+    "dcat-admin": "Jjkkopq\\DcatConfigx\\ConfigxServiceProvider",
+    "laravel": {
+      "providers": [
+        "Jjkkopq\\DcatConfigx\\ConfigxServiceProvider"
+      ]
+    }
+  }
+}
