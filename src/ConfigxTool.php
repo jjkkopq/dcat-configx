@@ -329,7 +329,11 @@ class ConfigxTool
                 if ($step == 0 && $slug && !Str::contains($slug, $k)) {
                     $_input[$slug][$k] = $item ? $val : static::handleInput($slug, $val, $items, $_middle, ++$_step);
                 } else {
-                    $_input[$k] = $item ? $val : static::handleInput($slug, $val, $items, $_middle, ++$_step);
+                    if(isset($_input[$k]) && $k == $slug){
+                        $_input[$k] = array_merge($_input[$k], $item ? $val : static::handleInput($slug, $val, $items, $_middle, ++$_step));
+                    }else{
+                        $_input[$k] = $item ? $val : static::handleInput($slug, $val, $items, $_middle, ++$_step);
+                    }
                 }
             }
         }

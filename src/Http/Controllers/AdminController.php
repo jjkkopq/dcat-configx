@@ -10,6 +10,7 @@ use Dcat\Admin\Widgets\Modal;
 use Dcat\Admin\Layout\Content;
 use Jjkkopq\DcatConfigx\Support;
 use Illuminate\Routing\Controller;
+use Jjkkopq\DcatConfigx\Models\ConfigxModel;
 use Jjkkopq\DcatConfigx\Actions\CreateButton;
 use Jjkkopq\DcatConfigx\Widgets\Forms\SiteForm;
 use Jjkkopq\DcatConfigx\Models\ConfigxTabsModel;
@@ -20,6 +21,7 @@ class AdminController extends Controller
 {
     public function index(Content $content): Content
     {
+        // (new ConfigxModel)->flushCache();
         // dd(config());
         // dd(\App\Models\Modules\Config::all());
         // $item = \App\Models\Modules\Config::find(61);
@@ -51,7 +53,7 @@ class AdminController extends Controller
                     // 'target' => '_blank'
                 ]));
                 $tab = new Tab();
-                $tab->add('站点配置', new AdminForm(), true);
+                $tab->add('站点配置', new AdminForm());
                 // $tab->add('前站配置', new SiteForm());
                 $tabs = (new ConfigxTabsModel)->allNodes();
                 foreach ($tabs as $key => $v) {
